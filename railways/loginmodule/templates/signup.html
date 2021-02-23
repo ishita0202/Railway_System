@@ -1,0 +1,50 @@
+{%extends "base.html" %} {% block content %}
+<form action="/loginmodule/loggedin/" method="post">
+  {% csrf_token %}
+  <br /><br />
+  <div class="signup_div" align="center">
+   
+  
+    <div class="form-group ">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="" required>
+    </div>
+    <div class="form-group ">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="" required>
+    </div>
+    <div class="form-group ">
+      <label for="inputPassword4">Confirm Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="" required>
+    </div>
+
+  <div class="form-group">
+    <label for="inputAddress">Birthdate</label>
+    <input type="date" class="form-control" id="Age" placeholder="" required>
+  </div>
+
+
+    <div class="form-group">
+      <label for="Contact">Contact no.</label>
+      <input type="text" class="form-control" id="inputCity" required>
+    </div>
+    <div class="form-group">
+    <label for="inputCity">Gender</label><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+        <label class="form-check-label" for="gridCheck">Check me out </label>
+      </div>
+    </div>
+  <button type="submit" class="btn btn-primary">SignUp</button>
+  
+  
+  {% endblock %}
+</form>

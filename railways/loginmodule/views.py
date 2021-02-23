@@ -28,3 +28,7 @@ def invalidlogin(request):
 def logout(request):
     auth.logout(request)
     return render(request,'logout.html')
+
+def signup(request):
+     
+    return render(request,'signup.html')
