@@ -2,12 +2,17 @@ from django.db import models
 
 # Create your models here.
 
-class User(models.Model):
-    fullname=models.CharField(max_length=50)
+class UserDetails(models.Model):
+    # fullname=models.CharField(max_length=50)
+    fname=models.CharField(max_length=20)
+    lname=models.CharField(max_length=20)
     email=models.CharField(max_length=40)
+    password=models.CharField(max_length=50)
+    conf_pass=models.CharField(max_length=50)
     id = models.AutoField(primary_key="id")
-    age=models.IntegerField()
+    age=models.DateField()
     contact=models.IntegerField()
+    gender=models.CharField(max_length=5)
 
 class Passenger(models.Model):
     username=models.CharField(max_length=20,primary_key=True)

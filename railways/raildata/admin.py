@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import UserDetails
 
-# Register your models here.
+
+
+class RailAdmin(admin.ModelAdmin):
+    list_display=('fname','lname','email','contact')
+
+
+admin.site.register(UserDetails,RailAdmin)

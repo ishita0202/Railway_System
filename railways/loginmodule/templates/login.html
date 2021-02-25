@@ -1,13 +1,26 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 {% if form.errors %}
-<p class="error"> Invalid Username or Password </p>
+<p class="error">Invalid Username or Password</p>
 {% endif %}
-<form action="/loginmodule/auth/" method = "post">{% csrf_token %}
-<label for="username">user name : </label>
-<input type="text" name = "username" value = "" id="username"><br><br>
-<label for="password"> Password:</label>
-<input type="password" name="password" value="" id="password"><br>
-<input type="submit" value="login"/>
+ <div class="login" align="center">
+<form action="/loginmodule/auth/" method="post">
+  {% csrf_token %}
+   <br><br>
+ 
+    
+   <div class="login_div">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button><br><br>
+     <h4>New User? <a href="/loginmodule/signup/"> Signup </a> </h4>
+      {% endblock %}
+    
+  </div>
+  </div>
 
-{% endblock %}
