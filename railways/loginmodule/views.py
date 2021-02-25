@@ -33,6 +33,7 @@ def logout(request):
     return render(request,'logout.html')
 
 def signup(request):
+<<<<<<< HEAD
     if request.method=="POST":
         
         fname=request.POST.get('fname')
@@ -60,3 +61,7 @@ def signup(request):
         return render(request,'signup.html')
 
 
+=======
+     
+    return render(request,'signup.html')
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f

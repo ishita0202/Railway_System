@@ -13,8 +13,12 @@ body
 
 
 .signup_div{   
+<<<<<<< HEAD
     width: 400px; 
     height: 500px;
+=======
+    width: 500px; 
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f
     margin: auto;  
     border:3px;
     border-color: rgb(32, 4, 4);

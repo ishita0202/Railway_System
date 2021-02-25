@@ -1,9 +1,14 @@
 {%extends "base.html" %} {% block content %}
+<<<<<<< HEAD
 <form action="" method="post">
+=======
+<form action="/loginmodule/loggedin/" method="post">
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f
   {% csrf_token %}
   <br /><br />
   <div class="signup_div" align="center">
    
+<<<<<<< HEAD
      <div class="row">
     <div class="col">
       <label for="fname">First name</label>
@@ -30,17 +35,39 @@
     <div class="form-group ">
       <label for="inputPassword4">Confirm Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password" name="pass2" required>
+=======
+  
+    <div class="form-group ">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="" required>
+    </div>
+    <div class="form-group ">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="" required>
+    </div>
+    <div class="form-group ">
+      <label for="inputPassword4">Confirm Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="" required>
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f
     </div>
 
   <div class="form-group">
     <label for="inputAddress">Birthdate</label>
+<<<<<<< HEAD
     <input type="date" class="form-control" id="Age" placeholder="Your BirthDate" name="bdate" required>
+=======
+    <input type="date" class="form-control" id="Age" placeholder="" required>
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f
   </div>
 
 
     <div class="form-group">
       <label for="Contact">Contact no.</label>
+<<<<<<< HEAD
       <input type="text" class="form-control" id="contact" placeholder="Contact"  name="contact" required>
+=======
+      <input type="text" class="form-control" id="inputCity" required>
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f
     </div>
     <div class="form-group">
     <label for="inputCity">Gender</label><br>
@@ -51,9 +78,23 @@
       <input type="radio" id="other" name="gender" value="other">
       <label for="other">Other</label>
     </div>
+<<<<<<< HEAD
     
   <button type="submit" class="btn btn-primary">SignUp</button>
   
 </form>
 
 {% endblock %}
+=======
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+        <label class="form-check-label" for="gridCheck">Check me out </label>
+      </div>
+    </div>
+  <button type="submit" class="btn btn-primary">SignUp</button>
+  
+  
+  {% endblock %}
+</form>
+>>>>>>> d2c27f818d007c52462a9282f3004758d0a9002f
