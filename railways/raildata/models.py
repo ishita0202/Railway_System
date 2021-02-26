@@ -25,10 +25,11 @@ class Admin(models.Model):
 
 class Train(models.Model):
     Trainno=models.IntegerField(primary_key=True)
-    Trainname=models.CharField(max_length=50)
+    arrivaltime=models.TimeField(auto_now_add=True)
+    departuretime=models.TimeField(auto_now_add=True)
     Source=models.CharField(max_length=30)
     Destination=models.CharField(max_length=30)
-
+    
 class Reservation(models.Model):
     noOfPassenger=models.IntegerField()
     Age=models.IntegerField()
