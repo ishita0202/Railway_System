@@ -19,4 +19,5 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('loginmodule/', include('loginmodule.urls')),
+    url('bookticket/', include('bookticket.urls')),
 ]

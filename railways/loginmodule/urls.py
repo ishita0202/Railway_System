@@ -1,5 +1,4 @@
-
-from .views import login, auth_view,loggedin,invalidlogin,logout,signup
+from .views import login, auth_view,loggedin,invalidlogin,logout,signup,home
 from django.contrib.auth import views as auth_views
 from django.conf.urls import url
 urlpatterns = [
@@ -9,4 +8,5 @@ urlpatterns = [
     url('loggedin/', loggedin),
     url('invalidlogin/', invalidlogin),
     url('signup/',signup),
+    url('home',home),
 ]

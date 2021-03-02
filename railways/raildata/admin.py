@@ -1,10 +1,9 @@
 from django.contrib import admin
 from .models import UserDetails
+from .models import Train
 
 
 
-class RailAdmin(admin.ModelAdmin):
-    list_display=('fname','lname','email','contact')
+admin.site.register(UserDetails)
 
-
-admin.site.register(UserDetails,RailAdmin)
+admin.site.register(Train)
