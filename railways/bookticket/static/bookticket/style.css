@@ -1,0 +1,14 @@
+
+.deprature_div{   
+    width: 380px; 
+    margin: auto;  
+    border:3px;
+    border-color: rgb(32, 4, 4);
+}  
+
+body {
+    background-image: url("bookticket/images/train.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
