@@ -1,4 +1,4 @@
-from raildata.models import UserDetails
+from raildata.models import Feedback, Train, UserDetails
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.shortcuts import redirect, render
 from django.http import HttpResponseRedirect
@@ -61,4 +61,28 @@ def signup(request):
 
 
 def home(request):
-    return render(request,'home.html')
+    
+     if request.method=="POST":
+        source = request.POST.get("source")
+        destination=request.POST.get("dest")
+        print(source)
+        print(destination)
+        trains=Train.objects.filter(Source__icontains=source,Destination__icontains=destination)
+        print(trains)
+        return render(request,'search.html',{'trains':trains})
+     else:
+        return render(request,'home.html')
+
+def test(request):
+    return render(request,'test.html')
+
+def feedback(request):
+    if request.method=="POST":
+       email=request.POST.get('email')
+       feedback=request.POST.get('feedback')
+       
+       x=Feedback(email=email,Feedback=feedback)
+       x.save()
+       return render(request,'loggedin.html')
+    else:    
+        return render(request,'feedback.html')

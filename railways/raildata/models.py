@@ -45,3 +45,7 @@ class Tickets(models.Model):
 class Payment(models.Model):
     Amount=models.IntegerField()
     
+class Feedback(models.Model):
+    email=models.CharField(max_length=40)
+    Feedback=models.CharField(max_length=300)
+    

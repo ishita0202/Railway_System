@@ -1,22 +1,91 @@
 
-<html>
-<head>
-    <style>
-        body{  
-            background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fphotos%2F7KKQG0eB_TI&psig=AOvVaw1O5XvHwU_x2G699YNdIUwa&ust=1614685520073000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDI1biCj-8CFQAAAAAdAAAAABAe");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        .div{
+{% extends 'base.html' %} {% block content %}
+  <form action="" method="post">
+{% csrf_token %} 
 
-        }
-    </style>
-    <title>Home</title>
-</head>
-<body>
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fphotos%2F7KKQG0eB_TI&psig=AOvVaw1O5XvHwU_x2G699YNdIUwa&ust=1614685520073000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDI1biCj-8CFQAAAAAdAAAAABAe" class="img-thumbnail" >
 
-    <h1>Ishita</h1>
-</body>
-</html>
+<div class="container-fluid" style="background-image: url('/static/images/img7.jpg'); background-size:100% 100% ">
+<br></br>
+
+
+<br></br><br></br><br></br><br></br><br></br><br>
+
+<div class="container  bg- text-white" >
+<br><br>
+
+  <div class="row">
+    <div class="col-sm">
+      <input type="text" class="form-control" placeholder="Source" name="source"  required>
+      
+    </div>
+    <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Destination" name="dest" required>
+    </div>
+    <div class="col-sm">
+        <input type="date" class="form-control" id="date" aria-describedby="" required>
+    </div>
+    &nbsp;   &nbsp;   &nbsp;
+      <div class="col-sm">
+     <button type="submit" class="btn btn-primary">Search</button> </div>
+  </div>
+  <br><br>
+</div>
+<br></br><br></br><br></br><br></br><br>
+
+
+</div>
+
+  <div  align="center" >
+
+
+
+<br><br><br>
+  <h1>Why Choose IndianRail for Train Booking?</h1>
+  <br><br>
+<div class="card-deck" style="max-width: 800px;">
+  <div class="card" >
+  <img src="/static/images/24-7.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">24*7 Customer Service </h5>
+      <p class="card-text">We work 24 hours a day to make sure our availability whenever our customers need us.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"></small>
+    </div>
+ 
+  </div>
+     &nbsp; 
+  <div class="card" >
+  <img src="/static/images/1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Our Train</h5>
+      <p class="card-text">Get a complete list of trains that shall be arriving at the railway station of your choice at the time selected by you.  </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"></small>
+    </div>
+  </div>
+
+<div class="card" >
+  <img src="/static/images/refunds.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Instant Refunds</h5>
+      <p class="card-text">Get Refunds instantly on cancellation of IndianRail train tickets  </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"></small>
+    </div>
+  </div>
+
+
+
+
+ 
+
+</div>
+</div>
+</form>
+
+<br><br><br><br>
+{%endblock%}
+

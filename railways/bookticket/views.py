@@ -35,19 +35,14 @@ def source_dest(request):
     if request.method=="POST":
         source = request.POST.get("source")
         destination=request.POST.get("dest")
-    
-        # productName = Product_details.objects.filter(product_name__icontains = search)
-        # productType = Product_details.objects.filter(type__icontains = search)
-        # productFlavour = Product_details.objects.filter(flavour__icontains = search)
-        # products = productName.union(productType)
-        # products = products.union(productFlavour)
         print(source)
         print(destination)
         trains=Train.objects.filter(Source__icontains=source,Destination__icontains=destination)
         print(trains)
         return render(request,'search.html',{'trains':trains})
 
-        # return render(request,'search.html',{'products':products,'search':search})
     else:
-        return render(request,'source_dest.html')
+        return render(request,'home.html')
     
+def timetable(request):
+    return render(request,'timetable.html')
