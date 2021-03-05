@@ -1,28 +1,34 @@
 {% extends 'base1.html' %} 
 {% block content %}
+
+<br><br><br><br><br><br>
+<div class="container-sm">
 <form action=" "method="post">
-<div class="row">
+
+   <div class="container-sm" style="width: 1000px; padding: 45px 500px;">
+   <div class="row">
     {% for train in trains %}
     <div class="col" >
-      <div class="card" style="width: 30rem; height: 12rem">
-        <div class="card-body" action="" method="">
-         <h5   class="card-title">Train no:  {{ train.Trainno }}</h5>
-         <div class="row">
-         <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;
-        <p class="card-text">Departure time:  {{ train.departuretime}}</p>
+      <div class="card text-center" style="width: 30rem; height: 15rem">
+        <div class="card-body " action="" method="">
+          <h5   class="card-title">Train no:  {{ train.Trainno }}</h5>
+          <div class="row">
+            <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;
+            <p class="card-text">Departure time:  {{ train.departuretime}}</p>
+          </div>
+          <div class="row text-center">
+            <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;
+            <p class="card-text">Destination:  {{ train.Destination}}</p>
+          </div>
+          <div class="row">
+            <p class="card-text">Ticket Price for 1:  {{ train.price}}</p></div></br>
+            <div class="row">
+            <a href="/bookticket/registration/" class="btn btn-primary" type="submit">BOOK</a>
+          </div>
         </div>
-        <div class="row">
-        <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;
-        <p class="card-text">Destination:  {{ train.Destination}}</p>
-             </div><div class="row">
-        <p class="card-text">Ticket Price for 1:  {{ train.price}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="/bookticket/registration/" class="btn btn-primary" type="submit">BOOK</a>
-        </div>
-   </div>
-      </div>
-      <br><br>
+      </div><br><br>
     </div>
     {% endfor %}
-  </div>
+  </div></div>
 </form>
 {% endblock %}

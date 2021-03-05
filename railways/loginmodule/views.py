@@ -18,19 +18,17 @@ def auth_view(request):
 
     if user is not None:
         auth.login(request, user)
-        return HttpResponseRedirect('/loginmodule/loggedin/')
+        return HttpResponseRedirect('/loginmodule/home.html/')
     else:
         return render(request,'invalidlogin.html')
 
-def loggedin(request):
-    return render(request,'loggedin.html', {"full_name":request.user.username})
 
 def invalidlogin(request):
     return render(request,'invalidlogin.html')
 
 def logout(request):
     auth.logout(request)
-    return render(request,'logout.html')
+    return render(request,'login.html')
 
 def signup(request):
     if request.method=="POST":
@@ -53,7 +51,7 @@ def signup(request):
             x=UserDetails(fname=fname,lname=lname,email=email,password=password,conf_pass=conf_pass,age=age,contact=contact,gender=gender)
             x.save()
             auth.login(request, user)
-            return render(request,'loggedin.html')
+            return render(request,'home.html')
 
     else:
         

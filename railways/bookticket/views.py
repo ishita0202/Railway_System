@@ -42,7 +42,7 @@ def source_dest(request):
         return render(request,'search.html',{'trains':trains})
 
     else:
-        return render(request,'home.html')
+        return render(request,'source_dest.html')
     
 def timetable(request):
     return render(request,'timetable.html')
