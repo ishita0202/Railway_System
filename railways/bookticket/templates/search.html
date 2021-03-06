@@ -2,30 +2,47 @@
 {% block content %}
 
 <br><br><br><br><br><br>
+<<<<<<< HEAD
 <br><br><br><br><br><br>
+=======
+<div class="container-sm">
+>>>>>>> dceed0cdda4bd66176333ea60a1494fd7236518e
 <form action=" "method="post">
-<div class="row">
+
+   <div class="container-sm" style="width: 1000px; padding: 45px 500px;">
+   <div class="row">
     {% for train in trains %}
     <div class="col" >
+<<<<<<< HEAD
       <div class="card" style="width: 25rem; height: 12rem">
         <div class="card-body" action="" method="">
+=======
+      <div class="card text-center" style="width: 30rem; height: 15rem">
+        <div class="card-body " action="" method="">
+>>>>>>> dceed0cdda4bd66176333ea60a1494fd7236518e
           <h5   class="card-title">Train no:  {{ train.Trainno }}</h5>
           <div class="row">
             <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
             <p class="card-text">Departure time:  {{ train.departuretime}}</p>
           </div>
+<<<<<<< HEAD
           <div class="row">
             <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+=======
+          <div class="row text-center">
+            <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;
+>>>>>>> dceed0cdda4bd66176333ea60a1494fd7236518e
             <p class="card-text">Destination:  {{ train.Destination}}</p>
           </div>
           <div class="row">
-            <p class="card-text">Ticket Price for 1:  {{ train.price}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Ticket Price for 1:  {{ train.price}}</p></div></br>
+            <div class="row">
             <a href="/bookticket/registration/" class="btn btn-primary" type="submit">BOOK</a>
           </div>
         </div>
       </div><br><br>
     </div>
     {% endfor %}
-  </div>
+  </div></div>
 </form>
 {% endblock %}

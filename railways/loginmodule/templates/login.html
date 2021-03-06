@@ -4,12 +4,26 @@
 {% if form.errors %}
 <p class="error">Invalid Username or Password</p>
 {% endif %}
+<<<<<<< HEAD
 <div class="container-fluid" style="background-image: url('/static/images/img9.jpg'); background-size:100% 100% ">
+=======
+<div class="container-fluid" style="background-image: url(''); background-size:100% 100% ">
+ {% comment %} <div class="container-fluid" style="padding: 35px 80px;">
+      <div class="container">
+
+      <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 login_section">  {% endcomment %}
+    
+>>>>>>> dceed0cdda4bd66176333ea60a1494fd7236518e
  <div class="login" align="center">
 <form action="/loginmodule/auth/" method="post">
   {% csrf_token %}
    <br><br><br><br><br><br>
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> dceed0cdda4bd66176333ea60a1494fd7236518e
    <div class="login_div">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Username</label>
@@ -25,5 +39,10 @@
     </div>
     </form>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+  </div>
+</div></div></div>
+>>>>>>> dceed0cdda4bd66176333ea60a1494fd7236518e
  {% endblock %}
