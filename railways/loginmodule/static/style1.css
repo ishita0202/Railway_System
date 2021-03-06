@@ -7,6 +7,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
+    
 }  
 
 .login_div{   
@@ -14,13 +15,14 @@ body
         margin: auto;  
         border:3px;
         border-color: rgb(20, 2, 2);
+        font-family: Arial;
 }  
 
 .signup_div{   
     width: 400px; 
-    height: 500px;
+    height:750px;
     margin: auto;  
-    border:3px;
+    border:5px;
     border-color: rgb(32, 4, 4);
 }  
 

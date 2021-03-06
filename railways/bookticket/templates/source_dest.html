@@ -1,39 +1,36 @@
 {% extends 'base1.html' %} {% block content %}
-{% if form.errors %}
 
-{% endif %}
+<div class="container-fluid" style="background-image: url('/static/images/img9.jpg'); background-size:100% 100%">
 <div class="source-dest" align="center">
 <form action="" method="post">
 {% csrf_token %} 
 
-
 <br><br><br>
-<h2>
-<img src="/static/images/railicon.png"  class="rounded-circle"  class="rounded" alt="Cinque Terre" width="90" height="90">
-Search.Book.Go</h2>
+    <h2>
+      <img src="/static/images/railicon.png"  class="rounded-circle"  class="rounded" alt="Cinque Terre" width="90" height="90">
+      Search.Book.Go
+    </h2>
 <br><br>
 <div class="container-fluid">
 
     <div class="deprature_div">
     
     <div class="row">
-        <div class="col">
+        <div class="col-6">
         <label for="source" class="form-lable"><b>From</b></label>
         <input type="text" class="form-control" placeholder="Source" name="source"  required>
         </div>
-        <div class="col">
+        <div class="col-6">
         <label for="dest"class="form-lable"><b>To</b></label>
         <input type="text" class="form-control" placeholder="Destination" name="dest" required>
         </div>
-    </div>
+    </div><br>
         <label for="date" class="form-lable">Departure Date</label>
         <input type="date" class="form-control" id="date" aria-describedby="" required>
-        <br><br>
-  
+       <br><br>
       <button type="submit" class="btn btn-primary">Search</button><br><br>
-
-    {% endblock %}
+<br><br><br><br><br><br><br>
   </div>
   </div>
 </div>
-
+{% endblock %}

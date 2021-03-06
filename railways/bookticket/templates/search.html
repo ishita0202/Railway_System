@@ -2,20 +2,20 @@
 {% block content %}
 
 <br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <form action=" "method="post">
 <div class="row">
     {% for train in trains %}
     <div class="col" >
-      <div class="card" style="width: 30rem; height: 12rem">
+      <div class="card" style="width: 25rem; height: 12rem">
         <div class="card-body" action="" method="">
           <h5   class="card-title">Train no:  {{ train.Trainno }}</h5>
           <div class="row">
-            <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;
+            <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
             <p class="card-text">Departure time:  {{ train.departuretime}}</p>
           </div>
           <div class="row">
-            <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;
+            <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
             <p class="card-text">Destination:  {{ train.Destination}}</p>
           </div>
           <div class="row">

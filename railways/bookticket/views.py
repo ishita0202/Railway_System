@@ -9,6 +9,8 @@ from django.contrib.auth.models import User
 def cancle(request):
     return render(request,'cancle.html')
 
+def ticket(request):
+    return render(request,'ticket.html')
 
 def payment(request):
     return render(request,'payment.html')
@@ -40,9 +42,8 @@ def source_dest(request):
         trains=Train.objects.filter(Source__icontains=source,Destination__icontains=destination)
         print(trains)
         return render(request,'search.html',{'trains':trains})
-
     else:
-        return render(request,'home.html')
+        return render(request,'source_dest.html')
     
 def timetable(request):
     return render(request,'timetable.html')

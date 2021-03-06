@@ -2,11 +2,12 @@
     width: 380px; 
     margin: auto;  
     border:3px;
-    border-color: rgb(32, 4, 4);
+    border-color: rgb(126, 67, 67);
 }  
 
 body {
-    background: #9b4c4c
+    background: #24c79e;
+    
 }
 
 .rounded {
@@ -26,14 +27,13 @@ input[type="radio"] {
 }
 
 .bold {
+    font-size: larger;
     font-weight: bold
 }
 body  
 {  
     margin: 0;  
     padding: 0;  
- 
-    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -43,11 +43,12 @@ body
         margin: auto;  
         border:3px;
         border-color: rgb(20, 2, 2);
+        color:aliceblue;
 }  
 
 .signup_div{   
     width: 400px; 
-    height: 500px;
+    height: 750px;
     margin: auto;  
     border:3px;
     border-color: rgb(32, 4, 4);
@@ -59,7 +60,7 @@ body
     padding: 10px 10px 0px 10px; 
     bottom: 0; 
     width: 100%; 
-    background-color: coral;
+    background-color: rgb(219, 151, 174);
     /* Height of the footer*/  
     height: 40px; 
     background: grey; 
