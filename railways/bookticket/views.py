@@ -35,7 +35,7 @@ def registration(request):
 def search(request):
    return render(request,'search.html')
 
-# @login_required(login_url='loginmodule:login')
+@login_required(login_url='loginmodule:login')
 def source_dest(request):
     if request.method=="POST":
         source = request.POST.get("source")
