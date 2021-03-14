@@ -50,4 +50,6 @@ def source_dest(request):
 
 
 def timetable(request):
-    return render(request,'timetable.html')
+    t=Train.objects.all()
+    print(t)
+    return render(request,'timetable.html',{'t':t})

@@ -89,12 +89,58 @@
 
       </div>
     </nav>
-  {% comment %} <div id="footer">This is a footer.
-                      This stays at the bottom of the page.
-
-
-                  </div>  {% endcomment %}
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'bookticket/style.css' %}" /> -->
+ 
     {%block content %} {%endblock %}
+
+
+    <footer class="bg-dark text-light text-center text-lg-start">
+  
+  <div class="container p-4">
+   
+    <div class="row">
+     
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">About Us</h5>
+
+        <p>
+          RailYatri aims to work in accordance with the needs
+ of its train travelers. It always updates features that 
+ simplify the train journeys of the passengers.
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase"></h5>
+<br>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/bookticket/source_dest/" class="text-light">Search train</a>
+          </li>
+          <li>
+            <a href="/bookticket/timetable/" class="text-light">Time table</a>
+          </li>
+       
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase"></h5>
+<br>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="/bookticket/cancle" class="text-light">Cancel</a>
+          </li>
+          <li>
+            <a href="/loginmodule/feedback/" class="text-light">Feedback</a>
+          </li>
+        
+        </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+
+  
+</footer>
   </body>
 </html>
