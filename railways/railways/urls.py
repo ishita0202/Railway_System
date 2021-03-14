@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('loginmodule/', include('loginmodule.urls')),
+    url('loginmodule/', include('loginmodule.urls',namespace='loginmodule')),
     url('bookticket/', include('bookticket.urls')),
 ]

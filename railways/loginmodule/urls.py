@@ -1,15 +1,16 @@
-from .views import login, auth_view,invalidlogin,logout,signup,home,feedback
+# from .views import login,invalidlogin,logout,signup,home,feedback,auth_view
 from django.contrib.auth import views as auth_views
 from django.conf.urls import url
 from . import views
+
+app_name = 'loginmodule'
+
 urlpatterns = [
-    url('login/', login),
-    url('auth/', auth_view),
-    url('logout/', logout),
-  
-    url('invalidlogin/', invalidlogin),
-    url('signup/',signup),
-    url('home',home),
-    url('feedback',feedback),
-  
+    url('login/', views.login , name="login"),
+    url('auth/', views.auth_view, name="auth_view"),
+    url('logout/', views.logout_view ,name="logout"),
+    url('invalidlogin/', views.invalidlogin,name="invalidlogin"),
+    url('signup/',views.signup,name="signup"),
+    url('home/',views.home, name="home"),
+    url('feedback/',views.feedback,name="feedback"),
 ]

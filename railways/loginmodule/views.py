@@ -5,11 +5,22 @@ from django.http import HttpResponseRedirect
 from django.contrib import auth
 from django.template.context_processors import csrf
 from django.contrib.auth.models import User
+from .decoders import unauthenticated_user
+from django.core.cache import cache
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 
 def login(request):
-    c = {}
-    c.update(csrf(request))
-    return render(request,'login.html', c)
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('loginmodule:home')
+    return render(request, 'login.html')
+
 
 def auth_view(request):
     username = request.POST.get('username', '')
@@ -18,7 +29,7 @@ def auth_view(request):
 
     if user is not None:
         auth.login(request, user)
-        return HttpResponseRedirect('/loginmodule/home.html/')
+        return HttpResponseRedirect('/loginmodule/home/')
     else:
         return render(request,'invalidlogin.html')
 
@@ -26,9 +37,11 @@ def auth_view(request):
 def invalidlogin(request):
     return render(request,'invalidlogin.html')
 
-def logout(request):
-    auth.logout(request)
-    return render(request,'login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('loginmodule:login')
+
 
 def signup(request):
     if request.method=="POST":
@@ -59,8 +72,8 @@ def signup(request):
 
 
 def home(request):
-    
      if request.method=="POST":
+       
         source = request.POST.get("source")
         destination=request.POST.get("dest")
         print(source)
@@ -71,9 +84,13 @@ def home(request):
      else:
         return render(request,'home.html')
 
+
 def test(request):
     return render(request,'test.html')
 
+
+
+@login_required(login_url='loginmodule:login')
 def feedback(request):
     if request.method=="POST":
        email=request.POST.get('email')
