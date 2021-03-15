@@ -53,3 +53,11 @@ def timetable(request):
     t=Train.objects.all()
     print(t)
     return render(request,'timetable.html',{'t':t})
+
+
+def ticket(request):
+    c=request.user
+    print(c)
+    print(c.first_name)
+    print(c.last_name)
+    return render(request,'ticket.html') 

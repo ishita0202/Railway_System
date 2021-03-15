@@ -11,6 +11,6 @@ urlpatterns = [
     url('logout/', views.logout_view ,name="logout"),
     url('invalidlogin/', views.invalidlogin,name="invalidlogin"),
     url('signup/',views.signup,name="signup"),
-    url('home/',views.home, name="home"),
+    url('',views.home, name="home"),
     url('feedback/',views.feedback,name="feedback"),
 ]

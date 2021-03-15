@@ -83,7 +83,9 @@ def home(request):
         return render(request,'search.html',{'trains':trains})
      else:
         return render(request,'home.html')
-
+    
+# def home_view(request):
+    # return render(request, 'account/main.html')
 
 def test(request):
     return render(request,'test.html')

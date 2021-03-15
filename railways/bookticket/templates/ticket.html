@@ -1,0 +1,44 @@
+{% extends 'base1.html' %} {% block content %}
+
+{% comment %} <div class="container-fluid" style="background-image: url('/static/images/img1.jpg'); background-size:100% 100% "> {% endcomment %}
+<form class="row g-3" action="" method="post" align="center">
+  {% csrf_token %}
+  <br><br>
+ <div class="deprature_div">
+ <br><br>
+ <h2 align="center">Ticket</h2>
+  <div class="col" >
+      <div class="card" style="width: 40rem; height: 30rem >
+        <div class="card-body" action="" method="">
+        <div class="row">
+          <p   class="card-text">Train no:  {{ train.Trainno }}</p> &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p class="card-text">Ticket no: </p>
+          </div>
+          <div class="row">
+            <p class="card-text">User Name:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Departure time:  {{ train.departuretime}}</p>
+          </div>
+          <div class="row">
+            <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Destination:  {{ train.Destination}}</p>
+          </div>
+          <div class="row">
+            <p class="card-text">Boarding At:  {{ train.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Reservation upto:  {{ train.Destination}}</p>
+          </div>
+          <div class="row">
+            <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Departure time:  {{ train.departuretime}}</p>
+          </div>
+          <div class="row">
+            <p class="card-text">Scheduled Departure :  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Scheduled Arrival:  {{ train.departuretime}}</p>
+          </div>
+        </div>
+      </div><br><br>
+    </div>
+</div>
+</form>
+<br><br><br><br>
+</br><br>
+ {% endblock %}

@@ -10,4 +10,5 @@ urlpatterns = [
     url('search/',views.search,name="search"),
     url('payment/',views.payment,name="payment"),
     url('timetable',views.timetable,name="timetable"),
+    url('ticket',views.ticket,name="ticket")
 ]
