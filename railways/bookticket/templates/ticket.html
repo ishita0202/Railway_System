@@ -10,29 +10,24 @@
   <div class="col" >
       <div class="card" style="width: 40rem; height: 30rem >
         <div class="card-body" action="" method="">
+        
         <div class="row">
-          <p   class="card-text">Train no:  {{ train.Trainno }}</p> &nbsp;&nbsp;&nbsp;&nbsp; 
-          <p class="card-text">Ticket no: </p>
+          <p   class="card-text">Train no:  {{ t.Trainno }}</p> &nbsp;&nbsp;&nbsp;&nbsp; 
+          <p class="card-text">Ticket no: {{ t.Ticketno }}</p>
+          </div>
+          
+          <div class="row">
+            <p class="card-text">Source:  {{ t.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Destination:  {{ t.Destination}}</p>
+          </div>
+         
+          <div class="row">
+            <p class="card-text">Arrival time:  {{ t.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Departure time:  {{ t.departuretime}}</p>
           </div>
           <div class="row">
-            <p class="card-text">User Name:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="card-text">Departure time:  {{ train.departuretime}}</p>
-          </div>
-          <div class="row">
-            <p class="card-text">Source:  {{ train.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="card-text">Destination:  {{ train.Destination}}</p>
-          </div>
-          <div class="row">
-            <p class="card-text">Boarding At:  {{ train.Source}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="card-text">Reservation upto:  {{ train.Destination}}</p>
-          </div>
-          <div class="row">
-            <p class="card-text">Arrival time:  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="card-text">Departure time:  {{ train.departuretime}}</p>
-          </div>
-          <div class="row">
-            <p class="card-text">Scheduled Departure :  {{ train.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
-            <p class="card-text">Scheduled Arrival:  {{ train.departuretime}}</p>
+            <p class="card-text">Scheduled Departure :  {{ t.arrivaltime}}</p>  &nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="card-text">Scheduled Arrival:  {{ t.departuretime}}</p>
           </div>
         </div>
       </div><br><br>

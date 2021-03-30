@@ -37,11 +37,15 @@ class Reservation(models.Model):
     Gender=models.CharField(max_length=1)
 
 class Tickets(models.Model):
-    Ticketno=models.IntegerField(primary_key=True)
+   
     Source=models.CharField(max_length=30)
     Destination=models.CharField(max_length=30)
     ticketStatus=models.CharField(max_length=10)
-
+    Trainno=models.IntegerField()
+    Ticketno = models.AutoField(primary_key=True)
+    arrivaltime=models.CharField(max_length=50)
+    departuretime=models.CharField(max_length=50)
+    
 class Payment(models.Model):
     Amount=models.IntegerField()
     

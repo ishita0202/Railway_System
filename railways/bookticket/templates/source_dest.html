@@ -3,7 +3,7 @@
 
 {% endif %}
 <div class="source-dest" align="center">
-<form action="" method="post">
+<form action="/bookticket/search/" method="post">
 {% csrf_token %} 
 
 
@@ -25,13 +25,16 @@ Search.Book.Go</h2>
         <label for="dest"class="form-lable"><b>To</b></label>
         <input type="text" class="form-control" placeholder="Destination" name="dest" required>
         </div>
-    </div>
+        </div>
         <label for="date" class="form-lable">Departure Date</label>
         <input type="date" class="form-control" id="date" aria-describedby="" required>
         <br><br>
-  
-      <button type="submit" class="btn btn-primary">Search</button><br><br>
-</div></div></div>
+      <div class="text-center">
+      <input type="submit" class="btn btn-primary" value="search" name = "search"></div><br><br>
+</div></div>
+</form></div>
+
 <br><br><br><br><br>
+
     {% endblock %}
   
