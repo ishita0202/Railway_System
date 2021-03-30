@@ -9,7 +9,12 @@ from django.contrib.auth.decorators import login_required
 import random
 @login_required(login_url='loginmodule:login')
 def cancle(request):
-    return render(request,'cancle.html')
+    if request.method=="POST":
+        ticket = request.POST.get("ticket")
+        t=Tickets.objects.filter(Ticketno__icontains=ticket)
+        return render(request,'cancle.html',{'t':t})
+    else:
+        return render(request,'cancle.html')
 
 @login_required(login_url='loginmodule:login')
 def payment(request):
