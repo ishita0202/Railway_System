@@ -1,3 +1,4 @@
+import loginmodule
 from raildata.models import Reservation, Tickets, Train, UserDetails
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.shortcuts import redirect, render
@@ -10,9 +11,15 @@ import random
 @login_required(login_url='loginmodule:login')
 def cancle(request):
     if request.method=="POST":
-        ticket = request.POST.get("ticket")
-        t=Tickets.objects.filter(Ticketno__icontains=ticket)
-        return render(request,'cancle.html',{'t':t})
+        if 'cancel' in request.POST:
+            ticket = request.POST.get("ticket")
+            t=Tickets.objects.get(Ticketno=ticket)
+            t.delete()
+            return HttpResponseRedirect("/loginmodule/home/")
+        else:
+            ticket = request.POST.get("ticket")
+            t=Tickets.objects.get(Ticketno=ticket)
+            return render(request,'cancle.html',{'t':t})
     else:
         return render(request,'cancle.html')
 

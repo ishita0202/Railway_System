@@ -56,7 +56,7 @@ def signup(request):
         gender=request.POST.get('gender')
         try:
             user = User.objects.get(email=request.POST.get('username'))
-            return render(request, 'signup.html', {'error': "Email Already Exists "})
+            return render(request, 'signup.html', {'error': "User Already Exists "})
         except User.DoesNotExist: 
             user = User.objects.create_user(username=request.POST.get('username'), password=request.POST.get('pass1'),first_name=request.POST.get('fname'),last_name=request.POST.get('lname'), email=request.POST.get('email'))
             # print(user)
@@ -84,12 +84,6 @@ def home(request):
      else:
         return render(request,'home.html')
     
-# def home_view(request):
-    # return render(request, 'account/main.html')
-
-def test(request):
-    return render(request,'test.html')
-
 
 
 @login_required(login_url='loginmodule:login')
@@ -100,6 +94,6 @@ def feedback(request):
        
        x=Feedback(email=email,Feedback=feedback)
        x.save()
-       return render(request,'loggedin.html')
+       return render(request,'home.html')
     else:    
         return render(request,'feedback.html')

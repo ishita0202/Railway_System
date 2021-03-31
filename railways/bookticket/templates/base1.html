@@ -29,9 +29,9 @@
   </head>
   <body>
     {% load static %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" >
       <div class="container-fluid">
-        <a class="navbar-brand" href="/loginmodule/home/">IndianRail</a>
+        <a class="navbar-brand" href="{% url 'loginmodule:home' %}">GujaratRail</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,15 +46,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/loginmodule/home/">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'loginmodule:home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bookticket/source_dest/">Book Tickets</a>
+              <a class="nav-link" href="{% url 'bookticket:source_dest' %}">Book Tickets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bookticket/timetable/">Timetable</a>
+              <a class="nav-link" href="{% url 'bookticket:timetable' %}">Timetable</a>
             </li>
-            
 
             <li class="nav-item dropdown">
               <a
@@ -67,85 +66,74 @@
               >
                 More
               </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <a class="dropdown-item" href="/bookticket/cancle">Cancel Ticket</a>
-                <a class="dropdown-item" href="/loginmodule/feedback/">Feedback</a>
-                <a class="dropdown-item" href="/loginmodule/home/">Logout</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'bookticket:cancle' %}">Cancel Ticket</a>
+                <a class="dropdown-item" href="{% url 'loginmodule:feedback' %}">Feedback</a>
+                <a class="dropdown-item" href="{% url 'loginmodule:logout' %}">Logout</a>
               </div>
             </li>
           </ul>
-          
-            
-            </form>
-        
         </div>
-<a align="right" href="/loginmodule/login/">Login</a>
-              
-      </div>
+          <a align="right" href="{% url 'loginmodule:login' %}">Login</a>
+        </div>
     </nav>
       {% load static %}
     
-<link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}" />
 
     {%block content %}
     
     
      {%endblock %}
 
-     <footer class="bg-dark text-light text-center text-lg-start">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">About Us</h5>
-
-        <p>
-  RailYatri aims to work in accordance with the needs
- of its train travelers. It always updates features that 
- simplify the train journeys of the passengers.
-        </p>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-0"></h5>
-<br>
-        <ul class="list-unstyled">
-          <li>
-            <a href="/bookticket/source_dest/" class="text-light">Search train</a>
-          </li>
-          <li>
-            <a href="/bookticket/timetable/" class="text-light">Time table</a>
-          </li>
-       
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase"></h5>
-<br>
-        <ul class="list-unstyled mb-0">
-          <li>
-            <a href="/bookticket/cancle" class="text-light">Cancel</a>
-          </li>
-          <li>
-            <a href="/loginmodule/feedback/" class="text-light">Feedback</a>
-          </li>
-        
-        </ul>
-      </div>
+    <footer class="bg-dark text-light text-center text-lg-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About Us</h5>
+            <p>
+              IndianRail aims to work in accordance with the needs
+              of its train travelers. It always updates features that 
+              simplify the train journeys of the passengers.
+            </p>
+          </div>
       
-      
-    
-    </div>
-   
-  
-</footer>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">ADDITIONAL LINKS</h5>
+            <ul class="list-unstyled lik">
+              <li>
+                <a href="/bookticket/source_dest/" class="text-light">Search train</a>
+              </li>
+              <li>
+                <a href="/bookticket/timetable/" class="text-light">Time table</a>
+              </li>
+              <li>
+                <a href="/bookticket/cancle" class="text-light">Cancel</a>
+              </li>
+              <li>
+                <a href="loginmodule/feedback" class="text-light">Feedback</a>
+              </li>
+            </ul>
+          </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 center">
+              <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+                </li>
+              </ul>
+            </div>
+
+        </div>
+      </div>          
+    </footer>
+         
   </body>
 </html>

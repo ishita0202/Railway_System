@@ -5,6 +5,7 @@
  
  <form action="" method="post">  
  {% csrf_token %}
+ <h3 class="center">Make Payment</h3><br>
     <div class="row">
         <div class="col-lg-6 mx-auto">
             <div class="card ">
@@ -39,7 +40,7 @@
                                         <div class="form-group"> <label><span class="hidden-xs">
                                                     <h6>Expiration Date</h6>
                                                 </span></label>
-                                            <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> </div>
+                                            <div class="input-group"> <input type="month" placeholder="MM" name="" class="form-control" required></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
@@ -90,6 +91,6 @@
 </div>
 </form>
 </div></div>
-<br><br><br><br><br><br><br><br><br>
+<br>
 
 {% endblock %}

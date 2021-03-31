@@ -4,44 +4,48 @@
   <br /><br />
   <div class="signup_div" align="center">
    
-     <div class="row">
-    <div class="col">
-      <label for="fname">First name</label>
-      <input type="text" class="form-control" placeholder="First name" name="fname">
+    <div class="row">
+      <div class="col">
+        <label for="fname">First name</label>
+        <input type="text" class="form-control" placeholder="First name" name="fname">
+      </div>
+      <div class="col">
+        <label for="fname">Last name</label>
+        <input type="text" class="form-control" placeholder="Last name" name="lname">
+      </div>
     </div>
-    <div class="col">
-      <label for="fname">Last name</label>
-      <input type="text" class="form-control" placeholder="Last name" name="lname">
-    </div>
-  </div>
   <br>
-    <div class="form-group ">
+  <div class="row">
+    <div class="col ">
       <label for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email" required>
     </div>
-    <div class="form-group ">
+    <div class="col ">
       <label for="inputEmail4">Username</label>
       <input type="username" class="form-control" id="username" placeholder="username" name="username" required>
     </div>
-    <div class="form-group ">
+    </div><br>
+    <div class="row">
+    <div class="col ">
       <label for="inputPassword4">Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="pass1" required>
     </div>
-    <div class="form-group ">
+    <div class="col ">
       <label for="inputPassword4">Confirm Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password" name="pass2" required>
     </div>
-
-  <div class="form-group">
+</div>
+<br>
+<div class="row">
+  <div class="col">
     <label for="inputAddress">Birthdate</label>
     <input type="date" class="form-control" id="Age" placeholder="Your BirthDate" name="bdate" required>
   </div>
-
-
-    <div class="form-group">
+    <div class="col">
       <label for="Contact">Contact no.</label>
       <input type="text" class="form-control" id="contact" placeholder="Contact"  name="contact" required>
     </div>
+    </div><br>
     <div class="form-group">
     <label for="inputCity">Gender</label><br>
       <input type="radio" id="male" name="gender" value="male">
@@ -54,5 +58,5 @@
   <button type="submit" class="btn btn-primary">SignUp</button>
 </div>  </div>
 </form>
-<br><br><br><br><br><br><br><br><br></br></br>
+<br>
 {% endblock %}
