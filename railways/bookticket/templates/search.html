@@ -14,7 +14,7 @@
  
     {% for train in trains %}
     <div class="col" >
-      <div class="card text-center" style="width: 30rem; height: 12rem">
+      <div class="card text-center" style="width: 30rem; height: 15rem">
         <div class="card-body " action="" method="post">
           <h5   class="card-title">Train no:  {{ train.Trainno }}</h5>
           <div class="card-center">
@@ -30,7 +30,7 @@
             <div class="text-center">
             <input type="text" name="arrival" value = "{{ train.arrivaltime}}" hidden>
             <input type="text" name="trainno" value = "{{ train.Trainno}}" hidden>
-            <input type="text" name="departure" value = " {{ train.departuretime}}" hidden>
+            <input type="text" name="departure" value = " {{ train.departuretime}}" hidden><br>
             <input type="submit" name = "book" value = "Book" class = "btn btn-primary"/>
           </div>
         </div>
@@ -39,4 +39,5 @@
     {% endfor %}
   </div></div>
 </form>
+<br><br><br><br><br><br>
 {% endblock %}
