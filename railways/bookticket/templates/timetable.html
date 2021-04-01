@@ -1,27 +1,6 @@
 {% extends 'base1.html' %}
  {% block content %}
- {% comment %} <form action="" method="POST">
-<div class="container  bg- text-white" >
-<br><br>
-
-  <div class="row">
-    <div class="col-sm">
-      <input type="text" class="form-control" placeholder="Source" name="source"  required>
-      
-    </div>
-    <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Destination" name="dest" required>
-    </div>
-    <div class="col-sm">
-        <input type="date" class="form-control" id="date" aria-describedby="" required>
-    </div>
-    &nbsp;   &nbsp;   &nbsp;
-      <div class="col-sm">
-     <button type="submit" class="btn btn-primary">Search</button> </div>
-  </div>
-  <br><br>
-</div>
-</form> {% endcomment %}
+ 
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -44,5 +23,5 @@
       {% endfor %}
      </tbody> 
 </table>
-<br><br><br><br><br><br><br><br><br>
+<br><br>
  {% endblock %}

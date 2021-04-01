@@ -19,14 +19,24 @@ Search.Book.Go</h2>
     <div class="row">
         <div class="col">
         <label for="source" class="form-lable"><b>From</b></label>
-        <input type="text" class="form-control" placeholder="Source" name="source"  required>
+        <input list="source" class="form-control" placeholder="Source" name="source"  required>
+            <datalist id="source">
+                <option value="Surat"><option value="Ahmedabad"><option value="Vadodara">
+                <option value="Porbandar"><option value="Gandhinagar"><option value="Bhuj">
+                <option value="Nadiad"><option value="Bhavnagar">
+            </datalist>
         </div>
         <div class="col">
         <label for="dest"class="form-lable"><b>To</b></label>
-        <input type="text" class="form-control" placeholder="Destination" name="dest" required>
+        <input list="dest" class="form-control" placeholder="Destination" name="dest" >
+            <datalist id="source">
+                <option value="Surat"><option value="Ahmedabad">
+                <option value="Mahesana"><option value="Rajkot">
+                <option value="Nadiad"><option value="Valsad">
+            </datalist>
         </div>
-        </div>
-        <label for="date" class="form-lable">Departure Date</label>
+        </div><br>
+        <label for="date" class="form-lable"><b>Departure Date</b></label>
         <input type="date" class="form-control" id="date" aria-describedby="" required>
         <br><br>
       <div class="text-center">
