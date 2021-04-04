@@ -25,75 +25,76 @@ def login(request):
 def auth_view(request):
     username = request.POST.get('username', '')
     password = request.POST.get('password', '')
-    user = auth.authenticate(username=username,password=password)
+    user = auth.authenticate(username=username, password=password)
 
     if user is not None:
         auth.login(request, user)
         return HttpResponseRedirect('/loginmodule/home/')
     else:
-        return render(request,'invalidlogin.html')
+        return render(request, 'invalidlogin.html')
 
 
 def invalidlogin(request):
-    return render(request,'invalidlogin.html')
+    return render(request, 'invalidlogin.html')
 
 
 def logout_view(request):
-    logout(request)
     return redirect('loginmodule:login')
 
 
 def signup(request):
-    if request.method=="POST":
-        
-        fname=request.POST.get('fname')
-        lname=request.POST.get('lname')
-        email=request.POST.get('email')
-        password=request.POST.get('pass1')
-        conf_pass=request.POST.get('pass2')
-        age=request.POST.get('bdate')
-        contact=request.POST.get('contact')
-        gender=request.POST.get('gender')
+    if request.method == "POST":
+
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        password = request.POST.get('pass1')
+        conf_pass = request.POST.get('pass2')
+        age = request.POST.get('bdate')
+        contact = request.POST.get('contact')
+        gender = request.POST.get('gender')
         try:
-            user = User.objects.get(email=request.POST.get('username'))
+            user = User.objects.get(username=request.POST.get('username'))
             return render(request, 'signup.html', {'error': "User Already Exists "})
-        except User.DoesNotExist: 
-            user = User.objects.create_user(username=request.POST.get('username'), password=request.POST.get('pass1'),first_name=request.POST.get('fname'),last_name=request.POST.get('lname'), email=request.POST.get('email'))
+        except User.DoesNotExist:
+            user = User.objects.create_user(username=request.POST.get('username'), password=request.POST.get(
+                'pass1'), first_name=request.POST.get('fname'), last_name=request.POST.get('lname'), email=request.POST.get('email'))
             # print(user)
             user.save()
-            x=UserDetails(fname=fname,lname=lname,email=email,password=password,conf_pass=conf_pass,age=age,contact=contact,gender=gender)
+            x = UserDetails(fname=fname, lname=lname, email=email, password=password,
+                            conf_pass=conf_pass, age=age, contact=contact, gender=gender)
             x.save()
             auth.login(request, user)
-            return render(request,'home.html')
+            return render(request, 'home.html')
 
     else:
-        
-        return render(request,'signup.html')
+
+        return render(request, 'signup.html')
 
 
 def home(request):
-     if request.method=="POST":
-       
+    if request.method == "POST":
+
         source = request.POST.get("source")
-        destination=request.POST.get("dest")
+        destination = request.POST.get("dest")
         print(source)
         print(destination)
-        trains=Train.objects.filter(Source__icontains=source,Destination__icontains=destination)
+        trains = Train.objects.filter(
+            Source__icontains=source, Destination__icontains=destination)
         print(trains)
-        return render(request,'search.html',{'trains':trains})
-     else:
-        return render(request,'home.html')
-    
+        return render(request, 'search.html', {'trains': trains})
+    else:
+        return render(request, 'home.html')
 
 
 @login_required(login_url='loginmodule:login')
 def feedback(request):
-    if request.method=="POST":
-       email=request.POST.get('email')
-       feedback=request.POST.get('feedback')
-       
-       x=Feedback(email=email,Feedback=feedback)
-       x.save()
-       return render(request,'home.html')
-    else:    
-        return render(request,'feedback.html')
+    if request.method == "POST":
+        email = request.POST.get('email')
+        feedback = request.POST.get('feedback')
+
+        x = Feedback(email=email, Feedback=feedback)
+        x.save()
+        return render(request, 'home.html')
+    else:
+        return render(request, 'feedback.html')

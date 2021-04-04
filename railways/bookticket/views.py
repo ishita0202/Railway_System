@@ -8,6 +8,8 @@ from django.template.context_processors import csrf
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 import random
+
+
 @login_required(login_url='loginmodule:login')
 def cancle(request):
     if request.method=="POST":
@@ -37,12 +39,9 @@ def registration(request):
           seats=request.POST.get('seats')
           age=request.POST.get('age')
           print(seats)
-        #   if(age<18):
-        #       return render(request, 'reservation.html', {'error': "Age should greater than 18"})
-        #   else:
           x=Reservation(Age=age,noOfPassenger=seats,Gender=gender)
           x.save()
-        
+          
           return HttpResponseRedirect("/bookticket/payment/")
     else:
         return render(request,'registration.html')
